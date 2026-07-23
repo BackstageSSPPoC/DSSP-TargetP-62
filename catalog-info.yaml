@@ -12,7 +12,7 @@ metadata:
     prometheus.io/rule: "kube_pod_container_resource_requests{pod=~'dssp-targetp-62.*'}|resource,kube_pod_container_status_restarts_total{pod=~'dssp-targetp-62.*'}|container"
     prometheus.io/alert: "KubePodCrashLooping,KubeDeploymentReplicasMismatch,KubePodNotReady,KubeContainerWaiting,KubeContainerOOMKilled,KubeDeploymentRolloutStuck"
     prometheus.io/labels: "namespace=dev"
-    grafana/overview-dashboard: 'http://35.208.92.122:3000/d/ad84zrr/service-overview-template?var-pod_prefix=${repoName.toLowerCase()}&var-namespace=${environment.toLowerCase()}'
+    grafana/overview-dashboard: 'http://35.208.92.122:3000/d/ad84zrr/service-overview-template?var-pod_prefix=dssp-targetp-62&var-namespace=dev'
   tags:
     - python
     - scaffolded
