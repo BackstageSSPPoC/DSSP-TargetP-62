@@ -1,0 +1,22 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: DSSP-TargetP-62
+  annotations:
+    github.com/project-slug: BackstageSSPPoC/DSSP-TargetP-62
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/kubernetes-id: DSSP-TargetP-62
+    sonarqube.org/project-key: dssp-targetp-62
+    jenkins.io/job-full-name: Backstage_SSP_PoC/DSSP-TargetP-62/main
+    argocd/app-name: dssp-targetp-62-dev
+    prometheus.io/rule: "kube_pod_container_resource_requests{pod=~'dssp-targetp-62.*'}|resource,kube_pod_container_status_restarts_total{pod=~'dssp-targetp-62.*'}|container"
+    prometheus.io/alert: "KubePodCrashLooping,KubeDeploymentReplicasMismatch,KubePodNotReady,KubeContainerWaiting,KubeContainerOOMKilled,KubeDeploymentRolloutStuck"
+    prometheus.io/labels: "namespace=dev"
+  tags:
+    - python
+    - scaffolded
+spec:
+  type: service
+  lifecycle: Dev
+  owner: user:default/chaitanya-shekhar-pandey
+  system: dssp-platform
